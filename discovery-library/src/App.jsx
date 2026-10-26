@@ -1,4 +1,4 @@
-import DiscoveryLibraryHome from './Homepage';
+import DiscoveryLibraryHome from './pages/Homepage';
 
 export default function App() {
   return <DiscoveryLibraryHome />;
