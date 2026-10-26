@@ -1,6 +1,5 @@
 import Link from '../ui/Link';
 import Icon from '../ui/Icon';
-import NavOrb from '../three/NavOrb';
 import { NAV_LINKS, MOBILE_LINKS } from '../../data';
 
 function Header({ scrolled, menuOpen, setMenuOpen, onSearch }) {
@@ -9,8 +8,7 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch }) {
     <>
       <nav className={`top${scrolled ? ' scrolled' : ''}`} id="nav">
         <Link to="/" className="brand" aria-label="Discovery Library home">
-          <NavOrb />
-          <span>Discovery Library</span>
+          <img className="logo" src="src/assets/Discovery Library Light Logo.svg" alt="Discovery Library" />
         </Link>
         <div className="navlinks">
           {NAV_LINKS.map((l) => (
