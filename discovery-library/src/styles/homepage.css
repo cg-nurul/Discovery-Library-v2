@@ -52,7 +52,7 @@ body{margin:0;background:var(--bg);color:var(--cream);font-family:var(--f-body);
 #nav{padding-left:20px;padding-right:20px;width:100%;}
 nav.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;display:flex;align-items:center;justify-content:space-between;justify-self:center;gap:16px;
   padding:16px max(28px,calc((100vw - 1200px)/2 + 28px));transition:background .25s ease,box-shadow .25s ease,backdrop-filter .25s ease;}
-.logo{max-width: 200px;}
+.logo{max-width: 150px;}
 nav.top.scrolled{background:rgba(3,20,13,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.35);}
 .brand{display:flex;align-items:center;gap:11px;font-family:var(--f-head);font-weight:800;font-size:20px;letter-spacing:-.02em;}
 .brand-beacon{width:28px;height:28px;border-radius:50%;background:rgba(25,214,138,0.06);border:1px solid rgba(255,200,58,0.35);box-shadow:0 0 10px rgba(25,214,138,0.25);flex-shrink:0;}
@@ -108,7 +108,7 @@ main#view{position:relative;z-index:2;outline:none;min-height:70vh;}
 }
 
 .dl-app h1.mega .hl {
-  display: contents;
+  display: inline-flex;
 }
 
 .dl-app h1.mega .word {
@@ -139,11 +139,11 @@ main#view{position:relative;z-index:2;outline:none;min-height:70vh;}
 .dl-app h1.mega .word-everything {
   font-weight: 600;
   font-family: var(--f-body);
-  padding-right: 20px;
 }
 
 .dl-app h1.mega .word-in {
   font-weight: 600;
+  padding-right: 20px;
   font-family: var(--f-body);
 }
 
