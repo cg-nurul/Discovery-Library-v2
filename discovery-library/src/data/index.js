@@ -24,8 +24,8 @@ const NAV_LINKS = [
   { to: '/resources', label: 'Resources', icon: 'book' },
   { to: '/videos', label: 'Videos', icon: 'play' },
   { to: '/sessions', label: 'Sessions', icon: 'calendar' },
-  { to: '/referencing', label: 'Referencing', icon: 'doc' },
-  { to: '/newsletter', label: 'Newsletter', icon: 'mailNav' },
+  { to: '/referencing', label: 'Referencing', icon: 'listCheck' },
+  { to: '/newsletter', label: 'Newsletter', icon: 'newspaper' },
 ];
 
 const MOBILE_LINKS = [
