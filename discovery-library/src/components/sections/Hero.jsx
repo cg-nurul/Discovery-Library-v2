@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import Link from '../ui/Link';
 import { nextSession } from '../../data';
+import Icon from '../ui/Icon';
 
 function Hero({ cueHidden }) {
   const ns = useMemo(() => nextSession(), []);
@@ -26,8 +27,8 @@ function Hero({ cueHidden }) {
 </h1>
             <p className="hero-sub">Training videos, session recordings, live workshops and an APA 7th referencing guide, all in one place for VET students and trainers.</p>
             <div className="hero-cta">
-              <Link to="/resources" className="btn btn-gold btn-lg">Browse resources</Link>
-              <Link to="/videos" className="btn btn-ghost btn-lg">Watch training videos</Link>
+              <Link to="/resources" className="btn btn-gold btn-lg"><Icon name="browse" />Browse resources</Link>
+              <Link to="/videos" className="btn btn-ghost btn-lg"><Icon name="play" />Watch training videos</Link>
             </div>
           </div>
           <div />

@@ -1,6 +1,7 @@
 import Link from '../ui/Link';
 import Icon from '../ui/Icon';
 import { NAV_LINKS, MOBILE_LINKS } from '../../data';
+import Logo from '../../assets/Discovery Library Light Logo.svg?react';
 
 function Header({ scrolled, menuOpen, setMenuOpen, onSearch }) {
   const close = () => setMenuOpen(false);
@@ -8,7 +9,11 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch }) {
     <>
       <nav className={`top${scrolled ? ' scrolled' : ''}`} id="nav">
         <Link to="/" className="brand" aria-label="Discovery Library home">
-          <img className="logo" src="src/assets/Discovery Library Light Logo.svg" alt="Discovery Library" />
+          <Logo
+  className="logo"
+  role="img"
+  aria-label="Discovery Library"
+/>
         </Link>
         <div className="navlinks">
           {NAV_LINKS.map((l) => (

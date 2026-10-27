@@ -9,7 +9,7 @@ const WORD_LESSONS = [
 const RES_CARDS = [
   { to: '/videos', cls: 'c-em', icon: 'play', t: 'Training Videos', d: 'Curated video lessons on VET compliance, technology, and assessor standards.' },
   { to: '/links', cls: 'c-gold', icon: 'link', t: 'Useful Links & Tools', d: 'Directory of academic search engines, research databases, and style manuals.' },
-  { to: '/recordings', cls: 'c-mint', icon: 'rewind', t: 'Session Recordings', d: 'Catch up on past live clinics, workshops, and compliance briefings anytime.' },
+  { to: '/recordings', cls: 'c-mint', icon: 'record', t: 'Session Recordings', d: 'Catch up on past live clinics, workshops, and compliance briefings anytime.' },
   { to: '/sessions', cls: 'c-amber', icon: 'calendar', t: 'Upcoming Sessions', d: 'Live referencing clinics, numeracy workshops, and ASQA webinars.', isNew: true },
 ];
 
@@ -22,7 +22,7 @@ const QUICK = [
 
 const NAV_LINKS = [
   { to: '/resources', label: 'Resources', icon: 'book' },
-  { to: '/videos', label: 'Videos', icon: 'play' },
+  { to: '/videos', label: 'Videos', icon: 'video' },
   { to: '/sessions', label: 'Sessions', icon: 'calendar' },
   { to: '/referencing', label: 'Referencing', icon: 'listCheck' },
   { to: '/newsletter', label: 'Newsletter', icon: 'newspaper' },
