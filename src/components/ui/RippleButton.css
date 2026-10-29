@@ -1,0 +1,33 @@
+/* Material Design Ripple Styles */
+.ripple-btn {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ripple-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ripple-wave {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  transform-origin: center;
+}
+
+.ripple-label {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  justify-content: inherit;
+  pointer-events: none;
+}

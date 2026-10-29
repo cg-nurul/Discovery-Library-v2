@@ -1,0 +1,38 @@
+/* Light layer only: colours, font, padding, radius all stay
+   with your existing .btn / .btn-gold classes. */
+.specular-button {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  text-decoration: none;
+}
+
+/* Remove translate and backglow specifically from specular buttons */
+.specular-button,
+.specular-button:hover,
+.specular-button:active,
+.specular-button:focus {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.specular-button__light {
+  position: absolute;
+  top: -24px;
+  left: -24px;
+  z-index: 1;
+  display: block;
+  background: transparent !important;
+  border: 0 !important;
+  pointer-events: none;
+}
+
+.specular-button__label {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: inherit;
+  justify-content: inherit;
+  pointer-events: none;
+}

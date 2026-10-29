@@ -1,0 +1,8 @@
+{
+  "name": "Discovery Library",
+  "description": "Comprehensive digital library and learning support portal for VET students and trainers, featuring training videos, APA 7th referencing guides, session recordings, and live workshops.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
