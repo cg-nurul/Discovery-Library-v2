@@ -367,7 +367,13 @@ main#view{position:relative;z-index:2;outline:none;min-height:70vh;}
 .v-time-display{font-size:12px;font-family:var(--f-mono);color:var(--sub);display:inline-flex;gap:4px;align-items:center;margin-left:4px;white-space:nowrap;}
 .v-time-display b{color:var(--cream);font-weight:600;}
 
-.v-title-badge{display:inline-flex;align-items:center;gap:7px;max-width:240px;font-size:12px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 10px;border-radius:6px;background:rgba(3,20,13,.65);border:1px solid var(--line);}
+/* Hidden by default */
+.v-title-badge {
+    display: none;
+}
+
+/* Show only in fullscreen */
+:fullscreen .v-title-badge{display:inline-flex;align-items:center;gap:7px;max-width:240px;font-size:12px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:4px 10px;border-radius:6px;background:rgba(3,20,13,.65);border:1px solid var(--line);}
 .v-dot{width:6px;height:6px;border-radius:50%;background:var(--em);flex-shrink:0;box-shadow:0 0 6px var(--em);}
 
 .v-volume-box{display:inline-flex;align-items:center;gap:6px;}
