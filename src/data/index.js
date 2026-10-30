@@ -1,10 +1,37 @@
-const WORD_LESSONS = [
-  'Opening & Quitting the Program',
-  'How to Create a Document, Add & Format Text',
-  'Page Formatting',
-  'Paragraph Formatting',
-  'Word Formatting Styles',
+const WORD_LESSONS_DATA = [
+  {
+    id: 1,
+    title: 'Opening & Quitting the Program',
+    url: 'https://cdn.vconsultancy.com.au/media/vid/discovery_library/Microsoft%20Word%20Training%20(1).mp4',
+    duration: '04:12',
+  },
+  {
+    id: 2,
+    title: 'How to Create a Document, Add & Format Text',
+    url: 'https://cdn.vconsultancy.com.au/media/vid/discovery_library/Microsoft%20Word%20Training%20(1).mp4',
+    duration: '06:45',
+  },
+  {
+    id: 3,
+    title: 'Page Formatting',
+    url: 'https://cdn.vconsultancy.com.au/media/vid/discovery_library/Microsoft%20Word%20Training%20(1).mp4',
+    duration: '05:20',
+  },
+  {
+    id: 4,
+    title: 'Paragraph Formatting',
+    url: 'https://cdn.vconsultancy.com.au/media/vid/discovery_library/Microsoft%20Word%20Training%20(1).mp4',
+    duration: '05:55',
+  },
+  {
+    id: 5,
+    title: 'Word Formatting Styles',
+    url: 'https://cdn.vconsultancy.com.au/media/vid/discovery_library/Microsoft%20Word%20Training%20(1).mp4',
+    duration: '07:18',
+  },
 ];
+
+const WORD_LESSONS = WORD_LESSONS_DATA.map((l) => l.title);
 
 const RES_CARDS = [
   { to: '/videos', cls: 'c-em', icon: 'play', t: 'Training Videos', d: 'Curated video lessons on VET compliance, technology, and assessor standards.' },
@@ -17,7 +44,7 @@ const QUICK = [
   { k: 'Journal article', ref: 'Lee, A. (2023). Enhancing student engagement in vocational education. Journal of VET Research, 12(3), 45–60. https://doi.org/10.1016/j.vet.2023.01.004', it: '(Lee, 2023)', n: 'Include volume, issue in parentheses, page range, and DOI URL whenever available.' },
   { k: 'Webpage', ref: 'Nguyen, T. (2025, May 12). Managing academic momentum in blended learning. Discovery Learning Insights. https://discoverylibrary.com.au/resources/momentum', it: '(Nguyen, 2025)', n: 'Include the site name when it differs from the author. Provide full URL.' },
   { k: 'Blog post', ref: 'Patel, R. (2025, June 3). Five principles for responsible AI usage in TAFE and VET. Education Tomorrow. https://educationtomorrow.edu.au/ai-principles', it: '(Patel, 2025)', n: 'Format like a webpage, specifying the specific blog publication name.' },
-  { k: 'Ebook', ref: 'Smith, J. (2024). Essential vocational training and workplace assessment (2nd ed.). Academic Press. https://doi.org/10.1007/978-3-030-12345-6', it: '(Smith, 2024)', n: 'Include book edition in parentheses if applicable, followed by publisher and DOI/URL.' },
+  { k: 'eBook', ref: 'Smith, J. (2024). Essential vocational training and workplace assessment (2nd ed.). Academic Press. https://doi.org/10.1007/978-3-030-12345-6', it: '(Smith, 2024)', n: 'Include book edition in parentheses if applicable, followed by publisher and DOI/URL.' },
 ];
 
 const NAV_LINKS = [
@@ -35,9 +62,9 @@ const MOBILE_LINKS = [
 ];
 
 const FOOT_LINKS = [
-  ['/resources', 'All Resources'], ['/videos', 'Training Videos'], ['/links', 'Useful Links & Tools'], ['/recordings', 'Recordings'],
-  ['/sessions', 'Sessions Calendar'], ['/referencing', 'APA 7th Guide'], ['/newsletter', 'Newsletter Archive'],
-  ['/llnd', 'My LLND Support'], ['/contact', 'Contact & FAQ'],
+  ['/videos', 'Training Videos'],
+  ['/llnd', 'My LLND Support'],
+  ['/contact', 'Book a Consultation'],
 ];
 
 // Titles + blurbs used by the quick-search modal in the header
@@ -62,4 +89,4 @@ const SEARCH_VIDEOS = [
 ];
 
 export { SESSIONS, nextSession } from './sessions';
-export { WORD_LESSONS, RES_CARDS, QUICK, NAV_LINKS, MOBILE_LINKS, FOOT_LINKS, SEARCH_VIDEOS };
+export { WORD_LESSONS, WORD_LESSONS_DATA, RES_CARDS, QUICK, NAV_LINKS, MOBILE_LINKS, FOOT_LINKS, SEARCH_VIDEOS };

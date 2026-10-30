@@ -7,7 +7,9 @@ function StartHere() {
     <section className="section">
       <div className="wrap">
         <Reveal className="sh">
-          <h2>Pick where to start</h2>
+          <h2>
+            Pick where to <span className="hl-word hl-em">start</span>
+          </h2>
           <p>Four places to learn, catch up and plan ahead.</p>
         </Reveal>
         <div className="cards4">

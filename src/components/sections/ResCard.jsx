@@ -14,12 +14,19 @@ function ResCard({ card, index }) {
     c.style.setProperty('--rx', `${(-y * 12).toFixed(2)}deg`);
   };
   const onLeave = () => { ref.current.style.setProperty('--ry', '0deg'); ref.current.style.setProperty('--rx', '0deg'); };
+  const words = (card.t || '').split(' ');
+  const lead = words.length > 1 ? words.slice(0, -1).join(' ') : '';
+  const last = words[words.length - 1];
+
   return (
     <Reveal className="tilt-wrap" delay={index * 0.09}>
       <a ref={ref} href={`#${card.to}`} className={`rcard glass ${card.cls}`} onPointerMove={onMove} onPointerLeave={onLeave}>
         {card.isNew}
         <span className="ico"><Icon name={card.icon} /></span>
-        <h3>{card.t}</h3>
+        <h3>
+          {lead ? `${lead} ` : ''}
+          <span className="hl-word">{last}</span>
+        </h3>
         <p>{card.d}</p>
         <span className="go"><Icon name="arrow" /></span>
       </a>

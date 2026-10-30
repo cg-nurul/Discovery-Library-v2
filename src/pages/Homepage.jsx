@@ -200,7 +200,7 @@ function DiscoveryLibraryHome() {
         currentRoute={route}
       />
 
-      <main id="view" ref={mainRef} tabIndex={-1} className={`page page-${route === '/' ? 'home' : route.slice(1)}`}>
+      <main id="view" ref={mainRef} tabIndex={-1} className={`page page-${route === '/' || !route ? 'home' : route.slice(1)}`}>
         {renderCurrentView()}
       </main>
 

@@ -7,7 +7,9 @@ function CtaBand() {
     <section className="section" style={{ paddingTop: 40 }}>
       <div className="wrap">
         <Reveal className="cta-band">
-          <h2>Stuck on an assignment?</h2>
+          <h2>
+            Stuck on an <span className="hl-word hl-gold">assignment?</span>
+          </h2>
           <p>Book a one-to-one consultation with the library team and get help that fits your course.</p>
           <div className="row">
             <SpecularButton

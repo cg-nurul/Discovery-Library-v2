@@ -7,7 +7,9 @@ function ComingUp() {
     <section className="section">
       <div className="wrap">
         <Reveal className="sh">
-          <h2>Coming up</h2>
+          <h2>
+            Coming <span className="hl-word hl-gold">up</span>
+          </h2>
           <p>Reserve your spot and set a reminder so you don’t miss a session.</p>
         </Reveal>
         <Reveal className="glass upnext">

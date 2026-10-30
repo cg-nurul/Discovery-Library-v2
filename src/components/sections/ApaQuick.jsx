@@ -11,7 +11,9 @@ function ApaQuick({ onCopy }) {
     <section className="section">
       <div className="wrap split">
         <Reveal>
-          <h2>Cite in APA 7th without the guesswork</h2>
+          <h2>
+            Cite in <span className="hl-word hl-gold">APA 7th</span> without the <span className="hl-word hl-em">guesswork</span>
+          </h2>
           <p className="lead">Pick a source type, copy the format, and paste it into your assignment. The full guide covers every section, with a search to find what you need fast.</p>
           <Link to="/referencing" className="btn btn-gold btn-lg">Open the referencing guide</Link>
         </Reveal>
