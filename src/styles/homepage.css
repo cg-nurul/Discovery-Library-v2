@@ -637,7 +637,7 @@ footer.foot{position:relative;z-index:2;border-top:1px solid var(--line);margin-
   flex-shrink: 0 !important;
   overflow: visible !important;
 }
-.foot-text{text-align:left;line-height:1.5;max-width:420px;}
+.foot-text{text-align:right;line-height:1.5;max-width:420px;}
 .foot nav{display:flex;align-items:center;justify-content:flex-end;gap:20px 28px;flex-wrap:wrap;flex-shrink:0;}
 .foot a:hover{color:var(--gold);text-decoration:underline;text-underline-offset:3px;}
 .foot-copy{color:var(--sub);font-weight:600;white-space:nowrap;}

@@ -14,4 +14,18 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 3000,
   },
+  build: {
+    cssCodeSplit: false, // always emit one CSS file
+    rollupOptions: {
+      output: {
+        entryFileNames: 'homepage.js',
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.names?.[0] ?? assetInfo.name ?? '';
+          return name.endsWith('.css')
+            ? 'homepage.css'
+            : 'assets/[name]-[hash][extname]';
+        },
+      },
+    },
+  },
 });

@@ -6,7 +6,15 @@ function Footer() {
   return (
     <footer className="foot">
       <div className="in">
+        
+        <nav className="foot-links">
+          <span className="foot-copy">© 2026 Discovery Library</span>
+          {FOOT_LINKS.map(([to, label]) => <Link key={label} to={to}>{label}</Link>)}
+        </nav>
         <div className="foot-left">
+          <div className="foot-text">
+            Comprehensive learning, research, and compliance support for VET students and trainers.
+          </div>
           <Link to={SITE_URLS.home} className="foot-brand" aria-label="Discovery Library home">
             <Logo
               className="foot-logo"
@@ -16,14 +24,7 @@ function Footer() {
               preserveAspectRatio="xMidYMid meet"
             />
           </Link>
-          <div className="foot-text">
-            Comprehensive learning, research, and compliance support for VET students and trainers.
-          </div>
         </div>
-        <nav className="foot-links">
-          {FOOT_LINKS.map(([to, label]) => <Link key={label} to={to}>{label}</Link>)}
-          <span className="foot-copy">© 2026 Discovery Library</span>
-        </nav>
       </div>
     </footer>
   );
