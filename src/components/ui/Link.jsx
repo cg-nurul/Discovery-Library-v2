@@ -1,11 +1,14 @@
 import { forwardRef } from 'react';
+import { resolveUrl } from '../../data/urls';
 
-/* All internal links go through <Link>. It renders plain "#/route" hrefs like the
- * reference. To use React Router, change the body of <Link> to <RouterLink to={to} />. */
-
-const Link = forwardRef(function Link({ to, children, ...rest }, ref) {
+/**
+ * Universal Link component.
+ * Routes directly to WordPress destination URLs without navigating to internal subpages.
+ */
+const Link = forwardRef(function Link({ to, href, children, ...rest }, ref) {
+  const targetHref = resolveUrl(to || href);
   return (
-    <a ref={ref} href={`#${to}`} {...rest}>
+    <a ref={ref} href={targetHref} {...rest}>
       {children}
     </a>
   );

@@ -10,6 +10,8 @@ import SearchIcon from '../../assets/search_1.svg?react';
 import MobileMenuIcon from '../../assets/menu.svg?react';
 import BrowseIcon from '../../assets/browse.svg?react';
 import VideoIcon from '../../assets/play-alt.svg?react';
+import PlayIconSimple from '../../assets/playSimple.svg?react';
+import PauseIconSimple from '../../assets/pauseSimple.svg?react';
 import ArrowIcon from '../../assets/arrow.svg?react';
 
 function CheckIcon(props) {
@@ -40,6 +42,8 @@ function CopyIcon(props) {
 
 const ICONS = {
   play: PlayIcon,
+  playSimple: PlayIconSimple,
+  pauseSimple: PauseIconSimple,
   video: VideoIcon,
   link: LinkIcon,
   record: RecordingIcon,

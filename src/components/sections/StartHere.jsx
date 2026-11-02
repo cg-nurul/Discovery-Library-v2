@@ -13,7 +13,7 @@ function StartHere() {
           <p>Four places to learn, catch up and plan ahead.</p>
         </Reveal>
         <div className="cards4">
-          {RES_CARDS.map((c, i) => <ResCard key={c.to} card={c} index={i} />)}
+          {RES_CARDS.map((c, i) => <ResCard key={c.t} card={c} index={i} />)}
         </div>
       </div>
     </section>

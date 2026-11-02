@@ -1,4 +1,5 @@
 import Icon from '../ui/Icon';
+import RippleButton from '../ui/RippleButton';
 
 function CiteRow({ label, text, onCopy }) {
   return (
@@ -6,7 +7,15 @@ function CiteRow({ label, text, onCopy }) {
       <small>{label}</small>
       <div className="cite">
         <code>{text}</code>
-        <button type="button" className="copy" onClick={() => onCopy(text)}><Icon name="copy" />Copy</button>
+        <RippleButton
+          as="button"
+          type="button"
+          className="copy"
+          onClick={() => onCopy(text)}
+          rippleColor="rgba(255, 200, 58, 0.4)"
+        >
+          <Icon name="copy" />Copy
+        </RippleButton>
       </div>
     </div>
   );

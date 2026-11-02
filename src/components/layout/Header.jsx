@@ -2,7 +2,7 @@ import Link from '../ui/Link';
 import Icon from '../ui/Icon';
 import SpecularButton from '../ui/SpecularButton';
 import RippleButton from '../ui/RippleButton';
-import { NAV_LINKS, MOBILE_LINKS } from '../../data';
+import { NAV_LINKS, MOBILE_LINKS, SITE_URLS } from '../../data';
 import Logo from '../../assets/Discovery Library Light Logo.svg?react';
 
 function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' }) {
@@ -11,7 +11,7 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' 
   return (
     <>
       <nav className={`top${scrolled ? ' scrolled' : ''}`} id="nav">
-        <Link to="/" className="brand" aria-label="Discovery Library home">
+        <Link to={SITE_URLS.home} className="brand" aria-label="Discovery Library home">
           <Logo
             className="logo"
             role="img"
@@ -25,7 +25,7 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' 
             const isActive = currentRoute === l.to;
             return (
               <Link
-                key={l.to}
+                key={l.label}
                 to={l.to}
                 style={isActive ? { background: 'rgba(255,200,58,0.12)', color: 'var(--gold)', fontWeight: 600 } : undefined}
               >
@@ -39,12 +39,12 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' 
           <button type="button" className="nav-search-btn" onClick={onSearch} aria-label="Search library resources" title="Quick Search (Ctrl+K)">
             <Icon name="search" />
           </button>
-          <RippleButton as={Link} to="/llnd" className="btn btn-ghost" rippleColor="var(--em)">
+          <RippleButton as={Link} to={SITE_URLS.llnd} className="btn btn-ghost" rippleColor="var(--em)">
             <Icon name="lock" />My LLND Portal
           </RippleButton>
           <SpecularButton
             as={Link}
-            to="/consultation"
+            to={SITE_URLS.contact}
             className="btn btn-gold"
             radius={12}
             lineColor="#ffffff"
@@ -61,7 +61,7 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' 
       <div className={`mnav${menuOpen ? ' open' : ''}`} id="mnav">
         {MOBILE_LINKS.map(([to, label]) => (
           <Link
-            key={to}
+            key={label}
             to={to}
             onClick={close}
             style={currentRoute === to ? { color: 'var(--gold)' } : undefined}
@@ -71,7 +71,7 @@ function Header({ scrolled, menuOpen, setMenuOpen, onSearch, currentRoute = '/' 
         ))}
         <SpecularButton
           as={Link}
-          to="/consultation"
+          to={SITE_URLS.contact}
           className="btn btn-gold"
           onClick={close}
           radius={12}

@@ -20,7 +20,7 @@ function ResCard({ card, index }) {
 
   return (
     <Reveal className="tilt-wrap" delay={index * 0.09}>
-      <a ref={ref} href={`#${card.to}`} className={`rcard glass ${card.cls}`} onPointerMove={onMove} onPointerLeave={onLeave}>
+      <a ref={ref} href={card.to} className={`rcard glass ${card.cls}`} onPointerMove={onMove} onPointerLeave={onLeave}>
         {card.isNew}
         <span className="ico"><Icon name={card.icon} /></span>
         <h3>

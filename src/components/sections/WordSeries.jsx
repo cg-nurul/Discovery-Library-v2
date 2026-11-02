@@ -2,7 +2,9 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Icon from '../ui/Icon';
 import Link from '../ui/Link';
 import Reveal from '../ui/Reveal';
-import { WORD_LESSONS_DATA } from '../../data';
+import SpecularButton from '../ui/SpecularButton';
+import RippleButton from '../ui/RippleButton';
+import { WORD_LESSONS_DATA, SITE_URLS } from '../../data';
 
 function formatTime(seconds) {
   if (isNaN(seconds) || seconds === null) return '00:00';
@@ -247,19 +249,29 @@ function WordSeries() {
           <p className="lead">
             From opening the program to tracking changes and comments. Work through the series in order, or jump to the lesson you need.
           </p>
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-            <Link to="/videos/word-series" className="btn btn-em btn-lg">
+          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center'}}>
+            <SpecularButton
+              as={Link}
+              to={SITE_URLS.videos}
+              className="btn btn-em btn-lg"
+              radius={14}
+              lineColor="#ffffff"
+              baseColor="#19D68A"
+              intensity={1.25}
+            >
               Open the series
-            </Link>
+            </SpecularButton>
             {isEnlarged && (
-              <button
+              <RippleButton
+                as="button"
                 type="button"
                 className="btn btn-ghost"
                 onClick={() => setIsEnlarged(false)}
                 title="Reset card size"
+                rippleColor="var(--em)"
               >
                 Compact view
-              </button>
+              </RippleButton>
             )}
           </div>
         </Reveal>
@@ -308,7 +320,7 @@ function WordSeries() {
                     togglePlay();
                   }}
                 >
-                  <Icon name="play" />
+                  <Icon name="playSimple" />
                 </button>
                 <div className="v-poster-info">
                   <span className="v-tag">Lesson {currentLesson.id} of {WORD_LESSONS_DATA.length}</span>
@@ -317,15 +329,16 @@ function WordSeries() {
               </div>
             )}
 
-            {/* Center Pause/Play Indicator button on click */}
-            {(!isPlaying && currentTime > 0) && (
+            {/* Center Pause / Play button when active (both default & fullscreen mode) */}
+            {(isPlaying || currentTime > 0) && (
               <button
                 type="button"
-                className="v-big-play-btn"
+                className={`v-center-btn${isPlaying ? ' is-pause' : ' is-play'}${showControls || !isPlaying ? ' show' : ''}`}
                 onClick={togglePlay}
-                aria-label="Resume video"
+                aria-label={isPlaying ? 'Pause video' : 'Resume video'}
+                title={isPlaying ? 'Pause' : 'Play'}
               >
-                <Icon name="play" />
+                <Icon name={isPlaying ? 'pauseSimple' : 'playSimple'} />
               </button>
             )}
 
@@ -355,26 +368,17 @@ function WordSeries() {
                 <div className="v-ctrl-group">
                   <button
                     type="button"
-                    className="v-btn"
+                    className="v-btn v-btn-play"
                     onClick={togglePlay}
                     aria-label={isPlaying ? 'Pause' : 'Play'}
                     title={isPlaying ? 'Pause (Space)' : 'Play (Space)'}
                   >
-                    {isPlaying ? (
-                      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <rect x="6" y="4" width="4" height="16" rx="1.5" />
-                        <rect x="14" y="4" width="4" height="16" rx="1.5" />
-                      </svg>
-                    ) : (
-                      <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                        <path d="M7 4.5v15l12-7.5-12-7.5z" />
-                      </svg>
-                    )}
+                    <Icon name={isPlaying ? 'pauseSimple' : 'playSimple'} />
                   </button>
 
                   <button
                     type="button"
-                    className="v-btn v-btn-small"
+                    className="v-btn v-btn-small v-btn-skip"
                     onClick={() => skipTime(-10)}
                     aria-label="Rewind 10 seconds"
                     title="Rewind 10s"
@@ -388,7 +392,7 @@ function WordSeries() {
 
                   <button
                     type="button"
-                    className="v-btn v-btn-small"
+                    className="v-btn v-btn-small v-btn-skip"
                     onClick={() => skipTime(10)}
                     aria-label="Forward 10 seconds"
                     title="Forward 10s"

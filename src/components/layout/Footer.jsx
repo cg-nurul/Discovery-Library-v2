@@ -1,5 +1,5 @@
 import Link from '../ui/Link';
-import { FOOT_LINKS } from '../../data';
+import { FOOT_LINKS, SITE_URLS } from '../../data';
 import Logo from '../../assets/Discovery Library Light Logo.svg?react';
 
 function Footer() {
@@ -7,7 +7,7 @@ function Footer() {
     <footer className="foot">
       <div className="in">
         <div className="foot-left">
-          <Link to="/" className="foot-brand" aria-label="Discovery Library home">
+          <Link to={SITE_URLS.home} className="foot-brand" aria-label="Discovery Library home">
             <Logo
               className="foot-logo"
               role="img"
@@ -21,7 +21,7 @@ function Footer() {
           </div>
         </div>
         <nav className="foot-links">
-          {FOOT_LINKS.map(([to, label]) => <Link key={to} to={to}>{label}</Link>)}
+          {FOOT_LINKS.map(([to, label]) => <Link key={label} to={to}>{label}</Link>)}
           <span className="foot-copy">© 2026 Discovery Library</span>
         </nav>
       </div>

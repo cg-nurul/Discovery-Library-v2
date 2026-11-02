@@ -33,11 +33,13 @@ const WORD_LESSONS_DATA = [
 
 const WORD_LESSONS = WORD_LESSONS_DATA.map((l) => l.title);
 
+import { SITE_URLS } from './urls';
+
 const RES_CARDS = [
-  { to: '/videos', cls: 'c-em', icon: 'play', t: 'Training Videos', d: 'Curated video lessons on VET compliance, technology, and assessor standards.' },
-  { to: '/links', cls: 'c-gold', icon: 'link', t: 'Useful Links & Tools', d: 'Directory of academic search engines, research databases, and style manuals.' },
-  { to: '/recordings', cls: 'c-mint', icon: 'record', t: 'Session Recordings', d: 'Catch up on past live clinics, workshops, and compliance briefings anytime.' },
-  { to: '/sessions', cls: 'c-amber', icon: 'calendar', t: 'Upcoming Sessions', d: 'Live referencing clinics, numeracy workshops, and ASQA webinars.', isNew: true },
+  { to: SITE_URLS.videos, cls: 'c-em', icon: 'play', t: 'Training Videos', d: 'Curated video lessons on VET compliance, technology, and assessor standards.' },
+  { to: SITE_URLS.links, cls: 'c-gold', icon: 'link', t: 'Useful Links & Tools', d: 'Directory of academic search engines, research databases, and style manuals.' },
+  { to: SITE_URLS.recordings, cls: 'c-mint', icon: 'record', t: 'Session Recordings', d: 'Catch up on past live clinics, workshops, and compliance briefings anytime.' },
+  { to: SITE_URLS.sessions, cls: 'c-amber', icon: 'calendar', t: 'Upcoming Sessions', d: 'Live referencing clinics, numeracy workshops, and ASQA webinars.', isNew: true },
 ];
 
 const QUICK = [
@@ -48,23 +50,30 @@ const QUICK = [
 ];
 
 const NAV_LINKS = [
-  { to: '/resources', label: 'Resources', icon: 'book' },
-  { to: '/videos', label: 'Videos', icon: 'video' },
-  { to: '/sessions', label: 'Sessions', icon: 'calendar' },
-  { to: '/referencing', label: 'Referencing', icon: 'listCheck' },
-  { to: '/newsletter', label: 'Newsletter', icon: 'newspaper' },
+  { to: SITE_URLS.resources, label: 'Resources', icon: 'book' },
+  { to: SITE_URLS.videos, label: 'Videos', icon: 'video' },
+  { to: SITE_URLS.sessions, label: 'Sessions', icon: 'calendar' },
+  { to: SITE_URLS.referencing, label: 'Referencing', icon: 'listCheck' },
+  { to: SITE_URLS.newsletter, label: 'Newsletter', icon: 'newspaper' },
 ];
 
 const MOBILE_LINKS = [
-  ['/', 'Home'], ['/resources', 'Library Resources'], ['/videos', 'Training Videos'], ['/links', 'Useful Links & Tools'],
-  ['/recordings', 'Session Recordings'], ['/sessions', 'Upcoming Sessions'], ['/referencing', 'Referencing Guide'],
-  ['/newsletter', 'Newsletters'], ['/llnd', 'My LLND Portal'], ['/contact', 'Contact Us & FAQ'],
+  [SITE_URLS.home, 'Home'],
+  [SITE_URLS.resources, 'Library Resources'],
+  [SITE_URLS.videos, 'Training Videos'],
+  [SITE_URLS.links, 'Useful Links & Tools'],
+  [SITE_URLS.recordings, 'Session Recordings'],
+  [SITE_URLS.sessions, 'Upcoming Sessions'],
+  [SITE_URLS.referencing, 'Referencing Guide'],
+  [SITE_URLS.newsletter, 'Newsletters'],
+  [SITE_URLS.llnd, 'My LLND Portal'],
+  [SITE_URLS.contact, 'Contact Us & FAQ'],
 ];
 
 const FOOT_LINKS = [
-  ['/videos', 'Training Videos'],
-  ['/llnd', 'My LLND Support'],
-  ['/contact', 'Book a Consultation'],
+  [SITE_URLS.videos, 'Training Videos'],
+  [SITE_URLS.llnd, 'My LLND Support'],
+  [SITE_URLS.contact, 'Book a Consultation'],
 ];
 
 // Titles + blurbs used by the quick-search modal in the header
@@ -88,5 +97,6 @@ const SEARCH_VIDEOS = [
   ['Comprehensive Training & Wellbeing Support', 'Frameworks connecting academic mentoring, English language assistance, and wellbeing resources.'],
 ];
 
+export { SITE_URLS, resolveUrl } from './urls';
 export { SESSIONS, nextSession } from './sessions';
 export { WORD_LESSONS, WORD_LESSONS_DATA, RES_CARDS, QUICK, NAV_LINKS, MOBILE_LINKS, FOOT_LINKS, SEARCH_VIDEOS };

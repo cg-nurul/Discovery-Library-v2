@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import Link from '../ui/Link';
 import SpecularButton from '../ui/SpecularButton';
 import RippleButton from '../ui/RippleButton';
-import { nextSession } from '../../data';
+import { nextSession, SITE_URLS } from '../../data';
 import Icon from '../ui/Icon';
 
 function Hero({ cueHidden }) {
@@ -33,7 +33,7 @@ function Hero({ cueHidden }) {
             <div className="hero-cta">
               <SpecularButton
                 as={Link}
-                to="/resources"
+                to={SITE_URLS.resources}
                 className="btn btn-gold btn-lg"
                 radius={14}
                 lineColor="#ffffff"
@@ -44,7 +44,7 @@ function Hero({ cueHidden }) {
               </SpecularButton>
               <RippleButton
                 as={Link}
-                to="/videos"
+                to={SITE_URLS.videos}
                 className="btn btn-ghost btn-lg"
                 rippleColor="var(--em)"
               >

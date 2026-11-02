@@ -172,7 +172,8 @@ function SpecularButton({
       ctx.save();
       drawPath(ctx, PAD + 0.5, PAD + 0.5, width - 1, height - 1, r);
       ctx.lineWidth = 1;
-      ctx.strokeStyle = 'rgba(255, 216, 96, 0.35)';
+      const isGreen = typeof baseColor === 'string' && (baseColor.toLowerCase().includes('19d68a') || baseColor.toLowerCase().includes('green') || baseColor.toLowerCase().includes('em'));
+      ctx.strokeStyle = isGreen ? 'rgba(25, 214, 138, 0.35)' : 'rgba(255, 216, 96, 0.35)';
       ctx.stroke();
       ctx.restore();
 
@@ -185,10 +186,17 @@ function SpecularButton({
       const a2 = Math.min(1, 0.72 * effectiveIntensity);
       const a3 = Math.min(1, 0.32 * effectiveIntensity);
 
-      grad.addColorStop(0, `rgba(255, 255, 255, ${a1})`);
-      grad.addColorStop(0.2, `rgba(255, 244, 200, ${a2})`);
-      grad.addColorStop(0.55, `rgba(255, 200, 58, ${a3})`);
-      grad.addColorStop(1, 'rgba(255, 200, 58, 0)');
+      if (isGreen) {
+        grad.addColorStop(0, `rgba(255, 255, 255, ${a1})`);
+        grad.addColorStop(0.2, `rgba(180, 255, 225, ${a2})`);
+        grad.addColorStop(0.55, `rgba(25, 214, 138, ${a3})`);
+        grad.addColorStop(1, 'rgba(25, 214, 138, 0)');
+      } else {
+        grad.addColorStop(0, `rgba(255, 255, 255, ${a1})`);
+        grad.addColorStop(0.2, `rgba(255, 244, 200, ${a2})`);
+        grad.addColorStop(0.55, `rgba(255, 200, 58, ${a3})`);
+        grad.addColorStop(1, 'rgba(255, 200, 58, 0)');
+      }
 
       // 3. Specular ambient halo (glow)
       ctx.save();

@@ -1,6 +1,8 @@
 import Link from '../ui/Link';
 import Reveal from '../ui/Reveal';
 import SpecularButton from '../ui/SpecularButton';
+import RippleButton from '../ui/RippleButton';
+import { SITE_URLS } from '../../data';
 
 function CtaBand() {
   return (
@@ -14,7 +16,7 @@ function CtaBand() {
           <div className="row">
             <SpecularButton
               as={Link}
-              to="/consultation"
+              to={SITE_URLS.contact}
               className="btn btn-gold btn-lg"
               radius={14}
               lineColor="#ffffff"
@@ -23,7 +25,14 @@ function CtaBand() {
             >
               Book a Consultation
             </SpecularButton>
-            <Link to="/referencing" className="btn btn-ghost btn-lg">Try the referencing guide</Link>
+            <RippleButton
+              as={Link}
+              to={SITE_URLS.referencing}
+              className="btn btn-ghost btn-lg"
+              rippleColor="var(--em)"
+            >
+              Try the referencing guide
+            </RippleButton>
           </div>
         </Reveal>
       </div>
