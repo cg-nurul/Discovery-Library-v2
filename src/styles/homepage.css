@@ -74,7 +74,7 @@ nav.top .logo,
 nav.top.scrolled{background:rgba(3,20,13,.84);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.35);}
 .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--f-head);font-weight:800;font-size:20px;letter-spacing:-.02em;flex-shrink:0;text-decoration:none;}
 .brand-beacon{width:28px;height:28px;border-radius:50%;background:rgba(25,214,138,0.06);border:1px solid rgba(255,200,58,0.35);box-shadow:0 0 10px rgba(25,214,138,0.25);flex-shrink:0;}
-.navlinks{display:flex;gap:4px;font-size:14.5px;font-weight:500;}
+.navlinks{display:flex;gap:4px;font-size:14.5px;font-weight:500;font-family: var(--f-head);}
 .navlinks a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:100px;color:#d8eadf;transition:background .2s,color .2s;white-space:nowrap;}
 .navlinks a:hover{background:rgba(255,255,255,.06);}
 .navlinks a svg{width:30px;height:30px;opacity:1;}

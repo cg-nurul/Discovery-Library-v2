@@ -13,6 +13,7 @@ import VideoIcon from '../../assets/play-alt.svg?react';
 import PlayIconSimple from '../../assets/playSimple.svg?react';
 import PauseIconSimple from '../../assets/pauseSimple.svg?react';
 import ArrowIcon from '../../assets/arrow.svg?react';
+import BooksLoop from '../../assets/animatedBooks.svg?react';
 
 function CheckIcon(props) {
   return (
@@ -59,6 +60,7 @@ const ICONS = {
   check: CheckIcon,
   close: CloseIcon,
   copy: CopyIcon,
+  animatedBooks: BooksLoop,
 };
 
 function Icon({ name, className = '' }) {
