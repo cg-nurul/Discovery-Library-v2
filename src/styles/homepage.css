@@ -131,7 +131,7 @@ nav.top.scrolled{background:rgba(3,20,13,.84);-webkit-backdrop-filter:blur(14px)
 .btn:hover{transform:translateY(-2px);}
 .btn-gold{background:linear-gradient(135deg,#FFD860,#FFB020);color:var(--ink)!important;box-shadow:0 8px 24px rgba(255,184,32,.28);padding: 15px 22px;}
 .btn-gold:hover{box-shadow:0 14px 34px rgba(255,184,32,.45);}
-.btn-em{background:linear-gradient(135deg,#46F2AA,#12B877);color:#01160e;box-shadow:0 8px 24px rgba(25,214,138,.28);}
+.btn-em{background:linear-gradient(135deg,#46F2AA,#12B877);color:#01160e !important;box-shadow:0 8px 24px rgba(25,214,138,.28);}
 .btn-em:hover{box-shadow:0 14px 34px rgba(25,214,138,.45);}
 .btn-ghost{background:rgba(255,255,255,.04);border-color:var(--line);color:var(--cream);}
 .btn-ghost:hover{border-color:var(--em);background:rgba(25,214,138,.1);}
