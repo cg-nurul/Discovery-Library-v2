@@ -10,7 +10,6 @@ import StartHere from '../components/sections/StartHere';
 import WordSeries from '../components/sections/WordSeries';
 import ComingUp from '../components/sections/ComingUp';
 import ApaQuick from '../components/sections/ApaQuick';
-import CtaBand from '../components/sections/CtaBand';
 
 function DiscoveryLibraryHome() {
   const progressRef = useRef(null);
@@ -114,7 +113,6 @@ function DiscoveryLibraryHome() {
         <WordSeries />
         <ComingUp />
         <ApaQuick onCopy={copyText} />
-        <CtaBand />
       </main>
 
       <div ref={footRef}><Footer /></div>

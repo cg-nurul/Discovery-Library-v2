@@ -2,6 +2,7 @@ import Link from '../ui/Link';
 import Reveal from '../ui/Reveal';
 import SpecularButton from '../ui/SpecularButton';
 import RippleButton from '../ui/RippleButton';
+import Icon from '../ui/Icon';
 import { SITE_URLS } from '../../data';
 
 function CtaBand() {
@@ -10,7 +11,12 @@ function CtaBand() {
       <div className="wrap">
         <Reveal className="cta-band">
           <h2>
-            Stuck on an <span className="hl-word hl-gold">assignment?</span>
+            <span>
+              Stuck on an <span className="hl-word hl-gold">assignment?</span>
+            </span>
+            <span className="cta-inline-illu" aria-hidden="true">
+              <Icon name="animatedBooks" className="cta-inline-books" />
+            </span>
           </h2>
           <p>Book a one-to-one consultation with the library team and get help that fits your course.</p>
           <div className="row">
