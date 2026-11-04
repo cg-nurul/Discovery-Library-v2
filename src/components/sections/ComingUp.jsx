@@ -50,9 +50,9 @@ function ComingUp() {
           {SESSIONS.slice(0, 3).map((s, i) => (
             <Reveal key={s.title} className={`uprow c-${s.cat}`} delay={i * 0.1}>
               <div className="datebadge"><b>{s.d}</b><span>{s.mon}</span></div>
-              <div>
-                <h3>{s.title}</h3>
-                <div className="m">{s.wd} · {s.time}</div>
+              <div className="uprow-info" style={{ textAlign: 'left', justifySelf: 'start' }}>
+                <h3 style={{ textAlign: 'left' }}>{s.title}</h3>
+                <div className="m" style={{ textAlign: 'left' }}>{s.wd} · {s.time}</div>
               </div>
               <span className="typetag">
                 {getSessionTypeIcon(s.type)}
