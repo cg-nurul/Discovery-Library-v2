@@ -3,7 +3,7 @@
  * Plugin Name:       Discovery Library App Loader
  * Description:       Serves the Discovery Library React SPA as a standalone, minimal HTML page on one WordPress page. No theme, Elementor or plugin output on that page.
  * Version:           1.1.0
- * Author:            Nurul Islam
+ * Author:            Nurul
  * Requires at least: 5.8
  * Requires PHP:      7.4
  * License:           GPL-2.0-or-later
