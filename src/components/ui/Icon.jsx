@@ -14,6 +14,7 @@ import PlayIconSimple from '../../assets/playSimple.svg?react';
 import PauseIconSimple from '../../assets/pauseSimple.svg?react';
 import ArrowIcon from '../../assets/arrow.svg?react';
 import BooksLoop from '../../assets/animatedBooks.svg?react';
+import CopySvgIcon from '../../assets/copy.svg?react';
 
 function CheckIcon(props) {
   return (
@@ -33,10 +34,56 @@ function CloseIcon(props) {
 }
 
 function CopyIcon(props) {
+  return <CopySvgIcon {...props} />;
+}
+
+function ArrowLeftIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16" {...props}>
+      <path d="M19 12H5m7 7-7-7 7-7" />
+    </svg>
+  );
+}
+
+function MailIcon(props) {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
-      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
-      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+      <rect x="2" y="4" width="20" height="16" rx="2" />
+      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+    </svg>
+  );
+}
+
+function ChevronDownIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+}
+
+function ChevronUpIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  );
+}
+
+function ChevronRightIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <polyline points="9 18 15 12 9 6" />
+    </svg>
+  );
+}
+
+function InfoIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <line x1="12" y1="16" x2="12" y2="12" />
+      <line x1="12" y1="8" x2="12.01" y2="8" />
     </svg>
   );
 }
@@ -57,10 +104,17 @@ const ICONS = {
   menu: MobileMenuIcon,
   browse: BrowseIcon,
   arrow: ArrowIcon,
+  arrowLeft: ArrowLeftIcon,
+  back: ArrowLeftIcon,
+  mail: MailIcon,
   check: CheckIcon,
   close: CloseIcon,
   copy: CopyIcon,
   animatedBooks: BooksLoop,
+  chevronDown: ChevronDownIcon,
+  chevronUp: ChevronUpIcon,
+  chevronRight: ChevronRightIcon,
+  info: InfoIcon,
 };
 
 function Icon({ name, className = '' }) {

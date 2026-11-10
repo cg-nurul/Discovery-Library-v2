@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Icon from '../components/ui/Icon';
 import Link from '../components/ui/Link';
 import Reveal from '../components/ui/Reveal';
+import RippleButton from '../components/ui/RippleButton';
+import GradientText from '../components/ui/GradientText';
 
 const CAMPUSES = [
   'Brisbane Campus Library',
@@ -55,17 +57,30 @@ export default function ConsultationPage({ onNotify }) {
   return (
     <div className="page page-consultation" style={{ paddingTop: 40, paddingBottom: 100 }}>
       <div className="wrap">
+        {/* Clean Back Button - No random pill */}
+        <div style={{ textAlign: 'left', marginBottom: 20 }}>
+          <RippleButton
+            as={Link}
+            to="/"
+            className="btn btn-ghost btn-sm"
+            rippleColor="var(--em)"
+          >
+            <Icon name="arrowLeft" />
+            Back to Home
+          </RippleButton>
+        </div>
+
         <Reveal className="sh">
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-            <Link to="/" className="btn btn-ghost btn-sm">
-              <Icon name="arrow" style={{ transform: 'rotate(180deg)', width: 16, height: 16 }} /> Back to Home
-            </Link>
-            <span className="chip" style={{ opacity: 1, animation: 'none' }}>
-              <span className="live" />
-              Free Academic Advising Services
-            </span>
-          </div>
-          <h2>Book a One-on-One Consultation</h2>
+          <h2>
+            <span style={{ fontFamily: 'var(--f-body)', fontWeight: 600 }}>Book a One-on-One</span>{' '}
+            <GradientText
+              colors={['#FFC83A', '#FF9E2C', '#FFE17D', '#FF9E2C', '#FFC83A']}
+              animationSpeed={5}
+              style={{ fontFamily: 'var(--f-head)', fontWeight: 800 }}
+            >
+              Consultation
+            </GradientText>
+          </h2>
           <p>
             Get dedicated 1-on-1 guidance with our qualified librarians and learning mentors. Available in person across all five campuses or online via Zoom.
           </p>
